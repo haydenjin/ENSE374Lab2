@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script type="text/javascript" src="functions.js"> </script>  
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css.css" />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center; padding-top: 40px; padding-bottom: 40px">
+        To Do
+      </h1>
+
+      <div
+        class="accordion"
+        id="accordionExample"
+        style="width: 40%; margin: auto; padding-bottom: 40px"
+      >
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link btn-block text-left"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Logged in as Hayden
+              </button>
+            </h2>
+          </div>
+
+          <div
+            id="collapseOne"
+            class="collapse hidden"
+            aria-labelledby="headingOne"
+            data-parent="#accordionExample"
+          >
+            <div class="card-body">
+              <!-- Button -->
+              <a href="index.html"
+                ><button
+                  type="button"
+                  class="btn btn-success"
+                  style="width: 405px"
+                >
+                  Log out
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- card holding all alerts -->
+      <div class="card" style="width: 60%; margin: auto; margin-bottom: 50px; " id="mainbody">
+        <div class="card-body" id="taskBody">
+          <!-- Claimed task -->
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                />
+              </div>
+            </div>
+
+            <input
+              class="form-control"
+              id="disabledInput"
+              style="width: auto"
+              type="text"
+              placeholder="This task is claimed"
+              disabled
+            />
+
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button"
+              >
+                Abandon
+              </button>
+            </div>
+          </div>
+          <!-- claimedByOther -->
+          <div class="input-group mb-3 claimedByOther">
+            <input
+              class="form-control"
+              id="disabledInput"
+              style="width: 500px"
+              type="text"
+              placeholder="This task is claimed"
+              disabled
+            />
+          </div>
+          <!-- complete -->
+          <div class="input-group mb-3 complete">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                  checked
+                />
+              </div>
+            </div>
+
+            <input
+              class="form-control"
+              id="disabledInput"
+              style="width: auto; text-decoration: line-through"
+              type="text"
+              placeholder="This task is claimed"
+              disabled
+            />
+          </div>
+          <!-- unclaimed -->
+          <div class="input-group mb-3 unclaimed">
+            <input
+              class="form-control"
+              id="disabledInput"
+              style="width: auto"
+              type="text"
+              placeholder="This task is claimed"
+              disabled
+            />
+
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button"
+              >
+                Claim
+              </button>
+            </div>
+          </div>
+          <!-- completedByOther -->
+          <div class="input-group mb-3 completedByOther">
+
+            <input
+              class="form-control"
+              id="disabledInput"
+              style="width: auto; text-decoration: line-through;"
+              type="text"
+              placeholder="This task is claimed"
+              disabled
+            />
+
+          </div>
+          <div id="taskBody2">
+
+          </div>
+          <div class="input-group mb-3">
+            <input
+              class="form-control"
+              style="width: auto"
+              id="input"
+              type="text"
+              placeholder="Enter a New task here"
+            />
+
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary"
+                type="submit"
+                id="newTask"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+        class="btn btn-outline-secondary"
+        style="width: 200px; margin: auto; margin-bottom: 10px;"
+        type="button"
+        id="removeButton"
+        >
+          Remove Complete
+        </button>
+      </div>
+    </div>
+
+    <script type = "text/javascript"  src = "headers.js" ></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
